@@ -1,0 +1,39 @@
+<div class="logo" *ngIf="opacity > 0">
+  <div class="d-flex">
+    <div class="left-top" [ngStyle]="{
+        margin: marginSize + 'px',
+        width: widthHeight + 'px',
+        height: widthHeight + 'px',
+        opacity: opacity + '%'
+      }"></div>
+    <div class="right-top dynamic-element" [ngStyle]="{
+        margin: marginSize + 'px',
+        width: widthHeight + 'px',
+        height: widthHeight + 'px',
+        opacity: opacity + '%',
+        'transform': 'rotate(' + rotationDegree + 'deg)'
+      }"></div>
+  </div>
+  <div class="d-flex">
+    <div class="left-bottom" [ngStyle]="{
+        margin: marginSize + 'px',
+        width: widthHeight + 'px',
+        height: widthHeight + 'px',
+        opacity: opacity + '%'
+      }"></div>
+    <div class="right-bottom" [ngStyle]="{
+        margin: marginSize + 'px',
+        width: widthHeight + 'px',
+        height: widthHeight + 'px',
+        opacity: opacity + '%'
+      }"></div>
+  </div>
+</div>
+
+<div class="logo-container" *ngIf="opacity <= 0">
+  <h1 #logoH1 class="logo animated-logo moveToTopLeft" [ngClass]="{ fadeIn: true }">
+    <span>C</span> <span class="string">O</span> <span>N</span> <span>S</span> <span>I</span> <span>L</span>
+    <span>E</span>
+    <span>O</span> <span>N</span>
+  </h1>
+</div>
